@@ -7,7 +7,7 @@
 
 Split a tensor into a list of tensors, along the specified ‘axis’
 
-
+## Args
 * `self`(`@Tensor<T>`) - The input tensor.
 * `axis`(`usize`) - The axis along which to split on.
 * `num_outputs `(Option<usize>) - Number of outputs to split parts of the tensor into. 
@@ -42,6 +42,8 @@ fn split_tensor_example() -> Array<Tensor<u32>> {
     // We can call `split` function as follows.
     return tensor.split(0, num_outputs, split_num);
 }
->>> [[0,1],[4,5]]
-    [[2,3],[6,7]]
+>>> [
+        [[0,1],[4,5]],
+        [[2,3],[6,7]]
+    ]
 ```
